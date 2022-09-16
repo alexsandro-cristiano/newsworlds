@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 export const CardNewsContainer = styled.div`
   min-width: 30rem;
+  padding: 1rem;
   .mask {
     display: block;
     transition: ease-in-out 0.2s;
-    filter: grayscale(100%);
     &:hover {
-      filter: grayscale(0%);
       .containerImage {
         background-size: 110%;
       }
@@ -22,6 +21,25 @@ export const CardNewsContainer = styled.div`
     transition: 0.2s;
   }
   .content {
-    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0 1rem;
+    .source {
+      margin-top: 1rem;
+      font-weight: 500;
+      font-size: 1.3rem;
+    }
+    .title {
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .date {
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
   }
 `;
