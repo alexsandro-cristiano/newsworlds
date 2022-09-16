@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     }
     body{
         -webkit-font-smoothing:antialiased;
+        background: #FAFAFA;
     }
     body, textarea, input, button {
     font-family: 'Poppins', sans-serif;
