@@ -1,31 +1,37 @@
+import { NavLink } from 'react-router-dom';
 import { Container, NavBar } from './styles';
 
 export function Header() {
   return (
     <Container>
-      <h2 className="logo">News Worlds</h2>
+      <NavLink to={'/'} className="logo">
+        News Worlds
+      </NavLink>
       <NavBar>
         <ul>
           <li>
-            <a href="#">General</a>
+            <NavLink to="/">Página Inicial</NavLink>
           </li>
           <li>
-            <a href="#">Negocios</a>
+            <NavLink to="category/general">General</NavLink>
           </li>
           <li>
-            <a href="#">entreterimento</a>
+            <NavLink to="category/business">Negocios</NavLink>
           </li>
           <li>
-            <a href="#">saúde</a>
+            <NavLink to="category/entertainment">entreterimento</NavLink>
           </li>
           <li>
-            <a href="#">ciência</a>
+            <NavLink to="category/health">saúde</NavLink>
           </li>
           <li>
-            <a href="#">esportes</a>
+            <NavLink to="category/science">ciência</NavLink>
           </li>
           <li>
-            <a href="#">tecnologia</a>
+            <NavLink to="category/sports">esportes</NavLink>
+          </li>
+          <li>
+            <NavLink to="category/technology">tecnologia</NavLink>
           </li>
         </ul>
       </NavBar>
