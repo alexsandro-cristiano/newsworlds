@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const GridLayoutFourColumns = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 3rem;
-`;
+  gap: 1.5rem;
+`

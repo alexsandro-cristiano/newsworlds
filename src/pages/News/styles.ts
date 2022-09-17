@@ -1,11 +1,4 @@
-import styled from 'styled-components';
-
-export const ContainerNews = styled.section`
-  min-height: 100vh;
-  display: inline-flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-`;
+import styled from 'styled-components'
 
 export const ContainerNewsCategory = styled.div`
   color: #f9f9f9;
@@ -15,4 +8,9 @@ export const ContainerNewsCategory = styled.div`
   font-size: 2rem;
   padding-top: 1rem;
   text-transform: capitalize;
-`;
+`
+
+export const ContainerNews = styled.section`
+  min-height: 100vh;
+  padding: 2rem 5rem;
+`
