@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const CardNewsContainer = styled.div`
   min-width: 30rem;
-  padding: 1rem;
   .mask {
     display: block;
     transition: ease-in-out 0.2s;
@@ -13,7 +12,7 @@ export const CardNewsContainer = styled.div`
     }
   }
   .containerImage {
-    padding-top: 56.25%;
+    padding-top: 52%;
     border-radius: 5px;
     background-size: 100%;
     background-position: center;

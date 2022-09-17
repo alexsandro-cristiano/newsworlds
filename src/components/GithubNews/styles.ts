@@ -1,30 +1,24 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-  margin: 2rem 0;
-  width: 30rem;
+  margin-bottom: 3rem;
+
   a {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 0.5rem;
-
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.6rem;
     img {
       display: block;
-      max-width: 25vw;
-      max-height: 25vh;
+      width: 40%;
       border-radius: 5px;
     }
-  }
-`;
-
-export const TextContainer = styled.div`
-  margin-top: 1.2rem;
-  width: 20rem;
-  p {
-    font-size: 1.4rem;
-    font-weight: 400;
-    line-height: 1.6;
+    p {
+      font-size: 1.2rem;
+      span {
+        display: block;
+        text-decoration: underline;
+      }
+    }
   }
 `;

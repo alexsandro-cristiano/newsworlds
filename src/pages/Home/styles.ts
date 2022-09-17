@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 
 export const GridContainer = styled.div`
+  padding: 2rem 5rem;
   display: grid;
-  grid-template-columns: 1fr 320px;
-  grid-gap: 1.5rem;
-  padding: 0 2rem;
-  padding-bottom: 3rem;
+  grid-template-columns: 1fr 256px;
+  gap: 2rem;
+  align-items: flex-start;
 `;
 
 export const BoxNews = styled.div`
   width: 100%;
-  height: 100vh;
-  padding: 1rem;
-  div > h2 {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: gray;
-    margin-bottom: -1rem;
-  }
+`;
+export const Text = styled.span`
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: left;
+  color: gray;
+  margin-bottom: 0.5rem;
+  display: block;
 `;

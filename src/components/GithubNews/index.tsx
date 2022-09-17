@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { IGithub, IGithubData } from 'types/IGithub';
-import { Container, TextContainer } from './styles';
+import { Container } from './styles';
 
 export function GithubNews({ user }: IGithub) {
   const [userGithub, setUserGithub] = useState<IGithubData | null>(null);
@@ -13,24 +13,17 @@ export function GithubNews({ user }: IGithub) {
   return (
     <Container>
       <a href={userGithub?.html_url} target="_blank" rel="noreferrer">
-        <div className="containerI">
-          <img
-            src={userGithub?.avatar_url}
-            alt={userGithub?.name}
-            title={userGithub?.name}
-          />
-        </div>
-        <TextContainer>
-          <p>
-            Homem do {userGithub?.location} é identificado como{' '}
-            {userGithub?.name} e se atuo intitula como
-            {userGithub?.bio}.
-          </p>
-          <p>
-            Atualmente ele possui {userGithub?.public_repos} repositorios em uma
-            rede social chamada Github.
-          </p>
-        </TextContainer>
+        <img
+          src={userGithub?.avatar_url}
+          alt={userGithub?.name}
+          title={userGithub?.name}
+        />
+        <p>
+          Participante da rede social Github com total de{' '}
+          <strong>{userGithub?.public_repos} </strong> repositorios.{' '}
+          <strong>{userGithub?.name}</strong> foi identificado no{' '}
+          {userGithub?.location}.<span>Conheça mais sobre aqui.</span>
+        </p>
       </a>
     </Container>
   );
