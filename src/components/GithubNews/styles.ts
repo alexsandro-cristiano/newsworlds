@@ -22,6 +22,7 @@ export const Container = styled.section`
 
 export const TextContainer = styled.div`
   margin-top: 1.2rem;
+  width: 20rem;
   p {
     font-size: 1.4rem;
     font-weight: 400;
