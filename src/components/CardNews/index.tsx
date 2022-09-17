@@ -1,3 +1,6 @@
+import { formatDistanceToNowStrict } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
+
 import { CardNewsContainer } from './styles';
 
 const dados = {
@@ -12,7 +15,7 @@ const dados = {
   category: 'general',
   language: 'en',
   country: 'us',
-  published_at: '2020-08-05T05:47:24+00:00'
+  published_at: '2020-09-16T05:47:24+00:00'
 };
 
 export function CardNews() {
@@ -24,9 +27,20 @@ export function CardNews() {
           style={{ backgroundImage: `url(${dados.image})` }}
         ></section>
         <section className="content">
-          <span className="source">{dados.source}</span>
+          <div className="tags">
+            <span className="source">{dados.source}</span>
+            <span className="category">{dados.category}</span>
+          </div>
           <p className="title">{dados.title}</p>
-          <span className="date">{dados.published_at}</span>
+          <span className="date">
+            {}
+
+            {formatDistanceToNowStrict(new Date(dados.published_at), {
+              addSuffix: true,
+              unit: 'month',
+              locale: ptBR
+            })}
+          </span>
         </section>
       </a>
     </CardNewsContainer>

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { IGithub, IGithubData } from 'types/Github';
+import { IGithub, IGithubData } from 'types/IGithub';
 import { Container, TextContainer } from './styles';
 
 export function GithubNews({ user }: IGithub) {

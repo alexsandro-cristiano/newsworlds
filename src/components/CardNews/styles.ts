@@ -27,10 +27,23 @@ export const CardNewsContainer = styled.div`
     align-items: flex-start;
     gap: 1rem;
     padding: 0 1rem;
-    .source {
-      margin-top: 1rem;
-      font-weight: 500;
-      font-size: 1.3rem;
+    .tags {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .source,
+      .category {
+        margin-top: 1rem;
+        font-weight: 500;
+        font-size: 1.3rem;
+      }
+      .category {
+        background: #f7ecde;
+        padding: 0.3rem;
+        border-radius: 5px;
+        text-transform: capitalize;
+      }
     }
     .title {
       font-size: 1.6rem;
