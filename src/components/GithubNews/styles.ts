@@ -49,6 +49,7 @@ export const Container = styled.section`
       align-items: flex-start;
       justify-content: flex-start;
       gap: 0.6rem;
+      border: none;
       img {
         display: block;
         width: 40%;

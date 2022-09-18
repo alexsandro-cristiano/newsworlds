@@ -1,8 +1,8 @@
-import { DefaultLayout } from 'layouts/DefaultLayout';
-import { DefaultLayoutNews } from 'layouts/DefaultLayoutNews';
-import { Home } from 'pages/Home';
-import { NotFound } from 'pages/NotFound';
-import { Route, Routes } from 'react-router-dom';
+import { DefaultLayout } from 'layouts/DefaultLayout'
+import { DefaultLayoutNews } from 'layouts/DefaultLayoutNews'
+import { Home } from 'pages/Home'
+import { NotFound } from 'pages/NotFound'
+import { Route, Routes } from 'react-router-dom'
 
 export function Router() {
   return (
@@ -13,5 +13,5 @@ export function Router() {
       </Route>
       <Route path="*" element={<NotFound />} />
     </Routes>
-  );
+  )
 }

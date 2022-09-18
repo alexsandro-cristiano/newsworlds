@@ -1,13 +1,19 @@
-import { NavLink } from 'react-router-dom';
-import { Container, NavBar } from './styles';
+import { FiMenu } from 'react-icons/fi'
+import { NavLink } from 'react-router-dom'
+import { HeaderContainer, NavBarContainer } from './styles'
 
 export function Header() {
   return (
-    <Container>
-      <NavLink to={'/'} className="logo">
-        News Worlds
-      </NavLink>
-      <NavBar>
+    <>
+      <HeaderContainer>
+        <button>
+          <FiMenu size={24} />
+        </button>
+        <NavLink to={'/'} className="logo">
+          News Worlds
+        </NavLink>
+      </HeaderContainer>
+      <NavBarContainer>
         <ul>
           <li>
             <NavLink to="/">Página Inicial</NavLink>
@@ -34,7 +40,7 @@ export function Header() {
             <NavLink to="category/technology">tecnologia</NavLink>
           </li>
         </ul>
-      </NavBar>
-    </Container>
-  );
+      </NavBarContainer>
+    </>
+  )
 }
