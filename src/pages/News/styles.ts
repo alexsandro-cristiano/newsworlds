@@ -12,5 +12,4 @@ export const ContainerNewsCategory = styled.div`
 
 export const ContainerNews = styled.section`
   min-height: 100vh;
-  padding: 2rem 5rem;
 `

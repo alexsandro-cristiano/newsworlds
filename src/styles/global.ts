@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
    *{
@@ -14,7 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         background: #FAFAFA;
     }
     body, textarea, input, button {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 1rem;
     }
@@ -32,4 +32,4 @@ export const GlobalStyle = createGlobalStyle`
     button{
         cursor:pointer;
     }
-`;
+`

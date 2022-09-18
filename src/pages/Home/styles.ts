@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const GridContainer = styled.div`
   padding: 2rem 5rem;
@@ -6,16 +6,16 @@ export const GridContainer = styled.div`
   grid-template-columns: 1fr 256px;
   gap: 2rem;
   align-items: flex-start;
-`;
+`
 
-export const BoxNews = styled.div`
+export const AsideNews = styled.div`
   width: 100%;
-`;
+`
 export const Text = styled.span`
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 600;
   text-align: left;
-  color: gray;
-  margin-bottom: 0.5rem;
+  color: #bbbbbb;
+  margin-bottom: 0.7rem;
   display: block;
-`;
+`

@@ -1,25 +1,25 @@
-import axios from 'axios';
-import { CardNewsMini } from 'components/CardNews';
-import { GridLayoutFourColumns } from 'layouts/Girds/GridFourColumns/styles';
-import { useEffect, useState } from 'react';
-import { INews, INewsParams } from 'types/INews';
-import { ContainerNews, ContainerNewsCategory } from './styles';
+import axios from 'axios'
+import { CardNewsMini } from 'components/CardNews'
+import { GridLayoutNewsPage } from 'layouts/GridLayoutForPage/styles'
+import { useEffect, useState } from 'react'
+import { INews, INewsParams } from 'types/INews'
+import { ContainerNews, ContainerNewsCategory } from './styles'
 
 export function News({ category }: INewsParams) {
-  const [listNews, setListNews] = useState<INews[]>([]);
+  const [listNews, setListNews] = useState<INews[]>([])
 
   useEffect(() => {
     axios.get('http://localhost:8080/datanews').then(response => {
-      setListNews(response.data);
-    });
-  }, []);
+      setListNews(response.data)
+    })
+  }, [])
   return (
     <>
       <ContainerNewsCategory>{category}</ContainerNewsCategory>
       <ContainerNews>
-        <GridLayoutFourColumns>
+        <GridLayoutNewsPage>
           {listNews.map(news => {
-            console.log(typeof news);
+            console.log(typeof news)
 
             return (
               <CardNewsMini
@@ -30,10 +30,10 @@ export function News({ category }: INewsParams) {
                 published_at={news.published_at}
                 source={news.source}
               />
-            );
+            )
           })}
-        </GridLayoutFourColumns>
+        </GridLayoutNewsPage>
       </ContainerNews>
     </>
-  );
+  )
 }
