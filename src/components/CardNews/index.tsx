@@ -1,8 +1,8 @@
-import { formatDistanceToNowStrict } from 'date-fns';
-import ptBR from 'date-fns/locale/pt-BR';
-import { INews } from 'types/INews';
-import imageDefault from 'assets/image/imageDefault.jpeg';
-import { CardNewsContainer } from './styles';
+import { formatDistanceToNowStrict } from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
+import { INews } from 'utils/types/INews'
+import imageDefault from 'assets/image/imageDefault.jpeg'
+import { CardNewsContainer } from './styles'
 
 export function CardNewsMini({
   category,
@@ -12,7 +12,7 @@ export function CardNewsMini({
   title,
   url
 }: INews) {
-  const currentImage = image ? image : imageDefault;
+  const currentImage = image ? image : imageDefault
   return (
     <CardNewsContainer>
       <a href={url} target="_blank" rel="noreferrer" className="mask">
@@ -38,5 +38,5 @@ export function CardNewsMini({
         </section>
       </a>
     </CardNewsContainer>
-  );
+  )
 }

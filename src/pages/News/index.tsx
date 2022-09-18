@@ -2,25 +2,24 @@ import axios from 'axios'
 import { CardNewsMini } from 'components/CardNews'
 import { GridLayoutNewsPage } from 'layouts/GridLayoutForPage/styles'
 import { useEffect, useState } from 'react'
-import { INews, INewsParams } from 'types/INews'
+import { BASE_URL } from 'utils/http'
+import { INews, INewsParams } from 'utils/types/INews'
 import { ContainerNews, ContainerNewsCategory } from './styles'
 
 export function News({ category }: INewsParams) {
-  const [listNews, setListNews] = useState<INews[]>([])
+  const [allnews, setAllNews] = useState<INews[]>([])
 
   useEffect(() => {
-    axios.get('http://localhost:8080/datanews').then(response => {
-      setListNews(response.data)
+    axios.get(`${BASE_URL}`).then(response => {
+      setAllNews(response.data)
     })
-  }, [])
+  }, [category])
   return (
     <>
       <ContainerNewsCategory>{category}</ContainerNewsCategory>
       <ContainerNews>
         <GridLayoutNewsPage>
-          {listNews.map(news => {
-            console.log(typeof news)
-
+          {allnews.map(news => {
             return (
               <CardNewsMini
                 title={news.title}

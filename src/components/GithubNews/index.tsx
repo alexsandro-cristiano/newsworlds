@@ -1,15 +1,14 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { IGithub, IGithubData } from 'types/IGithub';
-import { Container } from './styles';
+import axios from 'axios'
+import { useEffect, useState } from 'react'
+import { BASE_URL_GITHUB } from 'utils/http'
+import { IGithub, IGithubData } from 'utils/types/IGithub'
+import { Container } from './styles'
 
 export function GithubNews({ user }: IGithub) {
-  const [userGithub, setUserGithub] = useState<IGithubData | null>(null);
+  const [userGithub, setUserGithub] = useState<IGithubData | null>(null)
   useEffect(() => {
-    axios
-      .get(`https://api.github.com/users/${user}`)
-      .then(res => setUserGithub(res.data));
-  }, []);
+    axios.get(`${BASE_URL_GITHUB}${user}`).then(res => setUserGithub(res.data))
+  }, [])
   return (
     <Container>
       <a href={userGithub?.html_url} target="_blank" rel="noreferrer">
@@ -26,5 +25,5 @@ export function GithubNews({ user }: IGithub) {
         </p>
       </a>
     </Container>
-  );
+  )
 }
