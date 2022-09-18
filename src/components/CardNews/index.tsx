@@ -12,13 +12,12 @@ export function CardNewsMini({
   title,
   url
 }: INews) {
-  const currentImage = image ? image : imageDefault
   return (
     <CardNewsContainer>
       <a href={url} target="_blank" rel="noreferrer" className="mask">
         <section
           className="containerImage"
-          style={{ backgroundImage: `url(${currentImage})` }}
+          style={{ backgroundImage: `url(${image})` }}
         ></section>
         <section className="content">
           <div className="tags">
@@ -27,8 +26,6 @@ export function CardNewsMini({
           </div>
           <p className="title">{title}</p>
           <span className="date">
-            {}
-
             {formatDistanceToNowStrict(new Date(published_at), {
               addSuffix: true,
               unit: 'month',

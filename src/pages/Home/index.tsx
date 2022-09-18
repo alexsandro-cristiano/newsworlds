@@ -1,33 +1,27 @@
-import axios from 'axios'
+import { useContext } from 'react'
 import { CardNewsMini } from 'components/CardNews'
 import { GithubNews } from 'components/GithubNews'
 import { GridLayoutNewsHome } from 'layouts/GridLayoutForPage/styles'
-import { useEffect, useState } from 'react'
-import { BASE_URL } from 'utils/http'
-import { INews } from 'utils/types/INews'
-import { SidebarNews, GridContainer, Text } from './styles'
+import { NewsContext } from 'utils/context/NewsContext'
+
+import { GridContainer, SidebarNews, Text } from './styles'
 
 export function Home() {
-  const [listNews, setListNews] = useState<INews[]>([])
-
-  useEffect(() => {
-    axios.get(`${BASE_URL}`).then(response => {
-      setListNews(response.data)
-    })
-  }, [])
+  const { news } = useContext(NewsContext)
   return (
     <>
       <GridContainer>
         <GridLayoutNewsHome>
-          {listNews.map(news => {
+          {news.map(newsItem => {
             return (
               <CardNewsMini
-                title={news.title}
-                url={news.url}
-                category={news.category}
-                image={news.image}
-                published_at={news.published_at}
-                source={news.source}
+                key={newsItem.published_at}
+                title={newsItem.title}
+                url={newsItem.url}
+                category={newsItem.category}
+                image={newsItem.image}
+                published_at={newsItem.published_at}
+                source={newsItem.source}
               />
             )
           })}
