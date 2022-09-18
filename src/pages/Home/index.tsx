@@ -1,13 +1,14 @@
-import { useContext } from 'react'
-import { CardNewsMini } from 'components/CardNews'
-import { GithubNews } from 'components/GithubNews'
-import { GridLayoutNewsHome } from 'layouts/GridLayoutForPage/styles'
-import { NewsContext } from 'utils/context/NewsContext'
+import { useContext } from 'react';
+import { CardNewsMini } from 'components/CardNews';
+import { GithubNews } from 'components/GithubNews';
+import { GridLayoutNewsHome } from 'layouts/GridLayoutForPage/styles';
+import { NewsContext } from 'utils/context/NewsContext';
 
-import { GridContainer, SidebarNews, Text } from './styles'
+import { GridContainer, SidebarNews, Text } from './styles';
 
 export function Home() {
-  const { news } = useContext(NewsContext)
+  const { news } = useContext(NewsContext);
+  console.log('Estou na HOME  tipo de news => ' + typeof news);
   return (
     <>
       <GridContainer>
@@ -23,7 +24,7 @@ export function Home() {
                 published_at={newsItem.published_at}
                 source={newsItem.source}
               />
-            )
+            );
           })}
         </GridLayoutNewsHome>
         <SidebarNews>
@@ -34,5 +35,5 @@ export function Home() {
         </SidebarNews>
       </GridContainer>
     </>
-  )
+  );
 }
