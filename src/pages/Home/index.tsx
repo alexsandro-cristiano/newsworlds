@@ -4,7 +4,7 @@ import { GithubNews } from 'components/GithubNews'
 import { GridLayoutNewsHome } from 'layouts/GridLayoutForPage/styles'
 import { useEffect, useState } from 'react'
 import { INews } from 'types/INews'
-import { AsideNews, GridContainer, Text } from './styles'
+import { SidebarNews, GridContainer, Text } from './styles'
 
 export function Home() {
   const [listNews, setListNews] = useState<INews[]>([])
@@ -33,13 +33,12 @@ export function Home() {
             )
           })}
         </GridLayoutNewsHome>
-        <AsideNews>
+        <SidebarNews>
           <Text>Leia Também</Text>
-
           <GithubNews user="RafaelVargas29" />
           <GithubNews user="suzanaslc" />
           <GithubNews user="alexsandro-cristiano" />
-        </AsideNews>
+        </SidebarNews>
       </GridContainer>
     </>
   )
