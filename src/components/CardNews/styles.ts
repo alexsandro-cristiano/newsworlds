@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const CardNewsContainer = styled.div`
   min-width: 30rem;
@@ -21,11 +21,12 @@ export const CardNewsContainer = styled.div`
   }
   .content {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
+    justify-content: center;
     gap: 1rem;
+    flex-direction: column;
     padding: 0 1rem;
+
     .tags {
       display: flex;
       align-items: center;
@@ -48,10 +49,13 @@ export const CardNewsContainer = styled.div`
       font-size: 1.6rem;
       font-weight: 600;
       line-height: 1.3;
+      height: 9rem;
     }
     .date {
+      font-weight: 500;
       font-size: 1.2rem;
-      font-weight: 300;
+      width: 100%;
+      text-align: right;
     }
   }
-`;
+`
