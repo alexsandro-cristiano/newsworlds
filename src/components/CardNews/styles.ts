@@ -1,7 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const CardNewsContainer = styled.div`
-  min-width: 30rem;
   .mask {
     display: block;
     transition: ease-in-out 0.2s;
@@ -58,4 +57,4 @@ export const CardNewsContainer = styled.div`
       text-align: right;
     }
   }
-`
+`;

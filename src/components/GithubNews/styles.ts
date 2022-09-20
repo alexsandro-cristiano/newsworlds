@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.article`
   margin-bottom: 1.5rem;
   a {
     display: flex;
@@ -8,11 +8,11 @@ export const Container = styled.section`
     justify-content: flex-start;
     gap: 0.7rem;
     padding: 0.2rem;
-    border: 1px solid rgba(192, 192, 192, 0.6);
     border-radius: 5px;
     img {
       display: block;
-      width: 40%;
+      max-width: 25vw;
+      max-height: 25vh;
       border-radius: 5px;
     }
     p {
@@ -28,11 +28,6 @@ export const Container = styled.section`
 
   @media (min-width: 425px) {
     a {
-      img {
-        display: block;
-        width: 40%;
-        border-radius: 5px;
-      }
       p {
         font-size: 1.6rem;
         line-height: 1.6;
@@ -51,12 +46,11 @@ export const Container = styled.section`
       gap: 0.6rem;
       border: none;
       img {
-        display: block;
-        width: 40%;
-        border-radius: 5px;
+        max-width: 15vw;
+        max-height: 15vh;
       }
       p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         span {
           display: block;
           text-decoration: underline;
@@ -64,4 +58,4 @@ export const Container = styled.section`
       }
     }
   }
-`
+`;

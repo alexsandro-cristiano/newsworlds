@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const GridContainer = styled.div`
   display: grid;
@@ -10,11 +10,11 @@ export const GridContainer = styled.div`
     'main';
   @media (min-width: 992px) {
     align-items: flex-start;
-    grid-template-columns: 1fr 256px;
+    grid-template-columns: 1fr 350px;
     gap: 2rem;
     padding: 2rem;
   }
-`
+`;
 
 export const SidebarNews = styled.div`
   width: 100%;
@@ -26,7 +26,7 @@ export const SidebarNews = styled.div`
   @media (max-width: 991px) {
     grid-area: sidebar;
   }
-`
+`;
 export const Text = styled.span`
   visibility: hidden;
   display: none;
@@ -39,4 +39,4 @@ export const Text = styled.span`
     display: block;
     visibility: visible;
   }
-`
+`;
